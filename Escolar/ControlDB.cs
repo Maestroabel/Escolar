@@ -516,14 +516,14 @@ namespace Escolar {
 
         public static Boolean AddAsignatura(Asignatura asignatura){
             try
-            {
-            string insert = "INSERT INTO Asignatura (Clave, Nombre, Creditos) VALUES (@Clave, @Nombre, @Creditos)";
-             MySqlCommand InsertCmd = new MySqlCommand(insert, con.connection);
+            {              
+                string insert = "INSERT INTO Asignatura (Clave, Nombre, Creditos) VALUES (@Clave, @Nombre, @Creditos)";
+                MySqlCommand InsertCmd = new MySqlCommand(insert, con.connection);
                 InsertCmd.Parameters.Add("@Clave", MySqlDbType.VarChar, 7);
                 InsertCmd.Parameters.Add("@Nombre", MySqlDbType.VarChar, 30);
                 InsertCmd.Parameters.Add("@Creditos", MySqlDbType.Int32);
                 InsertCmd.Parameters["@Clave"].Value = asignatura.Clave;
-                InsertCmd.Parameters["@Nombre"].Value = asignatura.Nombre;
+                InsertCmd.Parameters["@Nombre"].Value = asignatura.Nombre;               
                 InsertCmd.Parameters["@Creditos"].Value = asignatura.Creditos;
                 InsertCmd.Prepare();
                 InsertCmd.ExecuteNonQuery();
