@@ -13,7 +13,7 @@ namespace Escolar {
 
         public ControlDB()
         {
-            con = new ConexionDB();
+            con = new ConexionDB(db_password: "@Hotmail.com1");
         }
 
        public static MySqlDataReader rdr { get; set; }

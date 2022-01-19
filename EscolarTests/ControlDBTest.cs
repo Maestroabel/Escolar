@@ -56,9 +56,9 @@ namespace EscolarTests
         [TestMethod]
         public void GetProfesor_Test_ID_Profesor_Valido()
         {
-            Profesor profesor = new Profesor("1099999", "Marcos", "Manuel", "1234567");
+            Profesor profesor = new Profesor("123456", "Ejemplo", "Ejemplo", "1234567");
             ControlDB con = new ControlDB();
-            Profesor Result = ControlDB.GetProfesor("1099999");
+            Profesor Result = ControlDB.GetProfesor("123456");
             Assert.AreEqual(profesor.ID, Result.ID);
         }
         public void GetProfesor_Test_ID_Profesor_Invalido()
